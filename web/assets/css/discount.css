@@ -1,0 +1,146 @@
+body {
+  background: #0f172a;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* MAIN */
+.promo-seciton {
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
+
+/* CARD PROMO */
+.promo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+
+  background: #9c27b0;
+  border-radius: 28px;
+
+  padding: 40px;
+  margin-bottom: 70px;
+
+  position: relative;
+  overflow: hidden;
+
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+/* hover */
+.promo:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 30px rgba(229, 9, 20, 0.3);
+}
+.promo-title {
+  text-align: center;
+  font-size: 42px;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+  margin-top: 40px;
+}
+
+/* TAG */
+.promo span {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+
+  background: #e50914;
+  padding: 8px 18px;
+
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* CONTENT */
+.promo-content {
+  flex: 1;
+}
+
+.promo-content h2 {
+  font-size: 52px;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+/* DESCRIPTION */
+.promo p {
+  flex: 1;
+  color: #cbd5e1;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+/* IMAGE */
+.promo-img {
+  flex: 1;
+}
+
+.promo-img img {
+  width: 100%;
+  height: 320px;
+
+  object-fit: cover;
+
+  border-radius: 24px;
+
+  transition: 0.4s;
+}
+
+/* image hover */
+.promo-img img:hover {
+  transform: scale(1.04);
+}
+
+/* REVERSE LAYOUT */
+.promo:nth-child(even) {
+  flex-direction: row-reverse;
+}
+.promo:nth-child(even) span {
+  left: auto;
+  right: 25px;
+}
+
+/* GLOW EFFECT */
+.promo::before {
+  content: "";
+
+  position: absolute;
+  width: 250px;
+  height: 250px;
+
+  background: rgba(229, 9, 20, 0.12);
+
+  border-radius: 50%;
+
+  top: -80px;
+  right: -80px;
+
+  filter: blur(40px);
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .promo,
+  .promo:nth-child(even) {
+    flex-direction: column;
+  }
+
+  .promo-content h2 {
+    font-size: 38px;
+  }
+
+  .promo p {
+    font-size: 16px;
+  }
+
+  .promo-img img {
+    height: 250px;
+  }
+}

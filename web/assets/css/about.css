@@ -1,0 +1,122 @@
+body {
+  background: #0d1424;
+}
+.about-system {
+  max-width: 1230px;
+  min-height: 600px;
+  margin: 40px auto 0;
+  background-image:
+    linear-gradient(rgba(10, 10, 40, 0.45), rgba(10, 10, 40, 0.55)),
+    url("../../assets/images/about/backgroudsection1.png");
+
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.qcht {
+  max-width: 850px;
+  padding: 40px;
+}
+.qcht h1 {
+  font-size: 42px;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+}
+.qcht p {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+.sumenh {
+  max-width: 1230px;
+  margin: 40px auto;
+  padding: 90px 60px;
+}
+.sumenh h1 {
+  text-align: center;
+  color: white;
+  font-size: 48px;
+  text-transform: uppercase;
+  margin-bottom: 60px;
+}
+.list-item {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+.item {
+  background: #355fc4;
+  border-radius: 10px;
+  padding: 30px;
+  text-align: center;
+  color: white;
+}
+.title-item {
+  color: yellow;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+.item p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/*SYSTEM-CINEMA*/
+.cimena-system {
+  max-width: 1230px;
+  margin: 40px auto;
+  padding: 60px 50px;
+
+  color: white;
+}
+.title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.title h1 {
+  font-size: 48px;
+  text-transform: uppercase;
+}
+.system-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 35px;
+  align-items: start;
+}
+.content-map img {
+  width: 100%;
+  height: 520px;
+  object-fit: contain;
+  border-radius: 20px;
+}
+.content-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.cinema-card {
+  background: linear-gradient(to right, #4b2b95, #315dcc);
+  padding: 25px;
+  border-radius: 8px;
+}
+.cinema-card h2 {
+  font-size: 28px;
+  margin-bottom: 18px;
+  text-transform: uppercase;
+}
+
+.cinema-card p {
+  font-size: 17px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.cinema-card i {
+  color: yellow;
+  margin-right: 8px;
+}

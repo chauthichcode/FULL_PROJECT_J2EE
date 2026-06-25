@@ -1,0 +1,172 @@
+/* MAIN */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+main {
+  background: #0d1424;
+  color: white;
+}
+
+.main-banner {
+  position: relative;
+  width: 1400px;
+  height: 500px; /* nhỏ lại */
+  margin: 0 auto;
+  background-image: url("../images/imgindex/banner1.png");
+  background-size: contain; /* thấy đủ ảnh */
+  background-repeat: no-repeat;
+  background-position: center;
+}
+/* .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+} */
+
+.banner-content {
+  position: relative;
+  z-index: 2;
+  max-width: 650px;
+}
+
+.banner-content h1 {
+  font-size: 72px;
+  font-weight: 800;
+
+  line-height: 1.3;
+
+  margin-bottom: 25px;
+
+  color: white;
+
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
+.banner-content p {
+  font-size: 22px;
+  color: #ddd;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.banner-content button {
+  padding: 14px 28px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.datve-banner {
+  background: #ffb400;
+  color: black;
+  border: none;
+  margin-right: 15px;
+}
+
+.trailer-banner {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+/*MOVEI NOW*/
+.movie-now,
+.movie-upcoming,
+.movie-member {
+  padding: 100px;
+}
+.movie-now-title,
+.movie-upcoming-title,
+.movie-member-title {
+  font-size: 42px;
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.movie-list {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 30px;
+}
+/*MOVIE ITEMS*/
+.movie-item img {
+  width: 100%;
+  height: 500px;
+
+  object-fit: cover;
+}
+.movie-info h3 {
+  font-size: 22px;
+  text-align: center;
+  margin-top: 10px;
+}
+.movie-info p {
+  font-size: 16px;
+  text-align: center;
+  color: #aaa;
+}
+.movie-info button {
+  display: block;
+  margin: 15px auto 0;
+  padding: 10px 20px;
+  background: #ffb400;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+
+  cursor: pointer;
+}
+/*MEMBER CARD*/
+.movie-member-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+.member-cvip img,
+.member-cfriends img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 12px;
+
+  box-shadow: 0 0 35px rgba(255, 255, 0, 0.25);
+}
+.member-info {
+  margin-top: 25px;
+}
+.member-info h3 {
+  font-size: 36px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  text-align: center;
+}
+.member-info p {
+  font-size: 18px;
+  color: #ddd;
+  margin-bottom: 22px;
+  line-height: 1.6;
+}
+.member-info button {
+  background: #fff200;
+  color: #111;
+  border: none;
+  padding: 14px 42px;
+  font-weight: 800;
+  text-transform: uppercase;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.member-info button:hover {
+  background: #ffcc00;
+}

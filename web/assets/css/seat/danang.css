@@ -1,0 +1,95 @@
+/* --- 1. NỀN VÀ BỐ CỤC CHUNG --- */
+.booking-container {
+  background: linear-gradient(135deg, #0f172a 0%, #2e1065 100%);
+  min-height: 100vh;
+  padding: 40px 20px;
+  font-family: "Arial", sans-serif;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-size: 24px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+}
+
+/* --- 2. KHU VỰC MÀN HÌNH --- */
+.screen-area {
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.screen-curve {
+  height: 40px;
+  width: 100%;
+  border-top: 4px solid #ffffff;
+  border-radius: 50% / 100% 100% 0 0;
+  box-shadow: 0px -10px 20px rgba(255, 255, 255, 0.1);
+}
+
+.screen-text {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #e2e8f0;
+}
+
+/* --- 3. LƯỚI SƠ ĐỒ GHẾ (CÓ LỐI ĐI Ở GIỮA) --- */
+.seats-grid-center-aisle {
+  display: grid;
+  /* Chia làm 12 cột: Chữ cái (30px) + 5 Ghế trái + Lối đi (40px) + 5 Ghế phải */
+  grid-template-columns: 30px repeat(5, 35px) 40px repeat(5, 35px);
+  gap: 12px 8px;
+  align-items: center;
+}
+
+.row-label {
+  font-weight: bold;
+  font-size: 14px;
+  text-align: left;
+}
+
+/* --- 4. KIỂU DÁNG TỪNG CHIẾC GHẾ --- */
+.seat {
+  width: 35px;
+  height: 25px;
+  background-color: #475569; /* Màu xám cho ghế trống */
+  color: #cbd5e1;
+  font-size: 10px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.seat:hover {
+  background-color: #64748b;
+  transform: scale(1.1);
+}
+
+/* Ghế khi được user click chọn */
+.seat.selected {
+  background-color: #ffffff;
+  color: #0f172a;
+}
+
+/* Ghế đã có người mua (Vô hiệu hóa click) */
+.seat.occupied {
+  background-color: #334155;
+  color: #1e293b;
+  cursor: not-allowed;
+}
+
+/* --- 5. LỆNH TẠO LỐI ĐI --- */
+/* Ép ghế số 06 bắt đầu từ cột số 8 để chừa ra cột số 7 làm lối đi */
+.aisle-right {
+  grid-column-start: 8;
+}

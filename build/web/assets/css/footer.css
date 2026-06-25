@@ -1,0 +1,76 @@
+.footer {
+  background: linear-gradient(to right, #5b2aa8, #2f63ff);
+  color: white;
+  padding: 70px 120px;
+
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1fr 1fr;
+  gap: 50px;
+}
+
+.footer-container img {
+  width: 300px;
+  margin-bottom: 18px;
+}
+
+.footer-container h2 {
+  font-size: 24px;
+  margin-bottom: 25px;
+}
+
+.footer-btn {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-btn button {
+  padding: 14px 28px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.btn-ticket {
+  background: yellow;
+  color: black;
+}
+
+.btn-snack {
+  background: transparent;
+  color: yellow;
+  border: 2px solid yellow;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.tittle-footer-menu {
+  font-size: 22px;
+  text-transform: uppercase;
+  margin-bottom: 22px;
+  text-align: center;
+}
+
+.footer-column menu {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: left;
+}
+
+.footer-column li {
+  list-style: none;
+}
+
+.footer-column a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.footer-column a:hover {
+  color: yellow;
+}
