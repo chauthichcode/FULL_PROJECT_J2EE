@@ -13,6 +13,8 @@ public class LoginServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
+        request.setCharacterEncoding("UTF-8");
+
         String username = request.getParameter("username");
         String password = request.getParameter("password");
 
@@ -21,19 +23,25 @@ public class LoginServlet extends HttpServlet {
 
         if (acc != null) {
 
-            // lưu session
             HttpSession session = request.getSession();
+
+            // không nên lưu password vào session
+            acc.setPassword(null);
+
+            // lưu account vào session
             session.setAttribute("account", acc);
 
-            // phân quyền
+            // session tồn tại 30 phút
+            session.setMaxInactiveInterval(30 * 60);
+
             if (acc.getRoleId() == 1) {
-                response.sendRedirect("admin/dashboard.jsp");
+                response.sendRedirect(request.getContextPath() + "/index.jsp");
             } else {
-                response.sendRedirect("index.jsp");
+                response.sendRedirect(request.getContextPath() + "/index.jsp");
             }
 
         } else {
-            response.sendRedirect("login.jsp?error=1");
+            response.sendRedirect(request.getContextPath() + "/users/login.jsp?error=1");
         }
     }
 }

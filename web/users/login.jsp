@@ -22,7 +22,7 @@
         <div class="form-box login-form">
           <h1>LOGIN</h1>
 
-          <form action="../LoginServlet" method="post">
+          <form action="${pageContext.request.contextPath}/login" method="post">
               <input type="text" placeholder="Username" name="username" />
             <input type="password" placeholder="Password" name="password"/>
             <button type="submit">Login</button>
